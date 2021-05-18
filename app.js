@@ -31,7 +31,7 @@ app.post("/", function(req, res){
             const icon= weatherData.weather[0].icon;
             const imageUrl= "http://openweathermap.org/img/wn/"+ icon + "@2x.png";
             res.write("<p> The weather is currently"+ weatherDescription +"</p>");
-            res.write("<h1> The temp in "+ query+" is "+ temp + "degrees celcius </h1>");
+            res.write("<h1> The temp in "+ query+" is "+ temp + "degree F </h1>");
             res.write("<img src=" + imageUrl + ">");
             res.send();
         })
